@@ -1,0 +1,29 @@
+{
+  "study": "IronLink · Huella del cliente de escritorio",
+  "campaign": "Octubre 2026",
+  "scope": "Observaciones exploratorias de arranque y reposo; no llamadas",
+  "environment": "macOS; hardware y versiones exactas no consignados en este extracto",
+  "method": {
+    "runs_per_platform": 2,
+    "seconds_per_run": 120,
+    "sampling": "aproximadamente cada segundo",
+    "idle_window": "últimos 60 segundos",
+    "rss": "suma de memoria residente de procesos del paquete; auxiliares incluidos, PlugIns excluidos",
+    "cpu_scale": "100 por ciento por núcleo",
+    "size_unit": "MiB (2^20 bytes)",
+    "summary": "media aritmética de las dos ejecuciones"
+  },
+  "limitations": [
+    "Cuentas, pantallas, datos y sincronización no equivalentes",
+    "Una captura final de Plataforma B muestra una ventana sin contenido",
+    "RSS agregado puede contar memoria compartida múltiples veces",
+    "El cliente IronLink no incluye consumo del backend ni PostgreSQL",
+    "No demuestra superioridad general, estabilidad móvil ni calidad audiovisual",
+    "Datos históricos; no corresponden necesariamente a la versión actual"
+  ],
+  "platforms": [
+    {"platform": "IronLink", "idle_rss_mib": [147.5, 137.8], "idle_cpu_pct": [0.4, 0.42], "installed_bundle_mib": [55.2, 55.2], "idle_processes": [1, 1]},
+    {"platform": "Plataforma A", "idle_rss_mib": [1075.8, 1069.6], "idle_cpu_pct": [0.82, 0.78], "installed_bundle_mib": [480.8, 480.8], "idle_processes": [7, 7]},
+    {"platform": "Plataforma B", "idle_rss_mib": [2037.4, 2094.0], "idle_cpu_pct": [0.96, 1.37], "installed_bundle_mib": [1109.4, 1109.4], "idle_processes": [14, 14]}
+  ]
+}
